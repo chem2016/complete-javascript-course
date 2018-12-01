@@ -414,18 +414,18 @@ names[names.length] = 'Mary';
 console.log(names);
 
 // Different data types
-var john = ['John', 'Smith', 1990, 'designer', false];
+var john = ['John', 'Smith', 1990, 'designer', false]; 
 
-john.push('blue');
-john.unshift('Mr.');
+john.push('blue');   // add an element to the end of the array
+john.unshift('Mr.'); // add an element to the beginning of the array
+console.log(john); 
+
+john.pop(); // remove an element from the end
+john.pop();
+john.shift(); // remove an element from the beginning
 console.log(john);
 
-john.pop();
-john.pop();
-john.shift();
-console.log(john);
-
-console.log(john.indexOf(23));
+console.log(john.indexOf(23));  // if this element is not in the array, it will return -1
 
 var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
 console.log(isDesigner);
