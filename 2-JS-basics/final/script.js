@@ -478,10 +478,10 @@ console.log(tips, finalValues);
 
 
 /*****************************
-* Objects and properties
+* Objects and properties  // order does not matter
 */
 /*
-// Object literal
+// Object literal syntax ->>>>{}
 var john = {
     firstName: 'John',
     lastName: 'Smith',
@@ -491,17 +491,17 @@ var john = {
     isMarried: false
 };
 
-console.log(john.firstName);
-console.log(john['lastName']);
+console.log(john.firstName);   // use either dot notation or [] to access the property of an object
+console.log(john['lastName']); // here need to put a ''
 var x = 'birthYear';
 console.log(john[x]);
 
-john.job = 'designer';
+john.job = 'designer';  // we can mutate the data
 john['isMarried'] = true;
 console.log(john);
 
 // new Object syntax
-var jane = new Object();
+var jane = new Object();  // create a new object
 jane.firstName = 'Jane';
 jane.birthYear = 1969;
 jane['lastName'] = 'Smith';
@@ -522,14 +522,14 @@ var john = {
     job: 'teacher',
     isMarried: false,
     calcAge: function() {
-        this.age = 2018 - this.birthYear;
+        this.age = 2018 - this.birthYear;   // this means this object, means john.birthYear
     }
 };
 
 john.calcAge();
 console.log(john);
 */
-
+// array is also objects, that's why it has methods. only object has methods. 
 
 
 /*****************************
@@ -608,11 +608,11 @@ while(i < john.length) {
 }
 
 
-// continue and break statements
+// continue and break statements   (continue: quit current loop start with next one, break: break out the entire loop)
 var john = ['John', 'Smith', 1990, 'designer', false, 'blue'];
 
 for (var i = 0; i < john.length; i++) {
-    if (typeof john[i] !== 'string') continue;
+    if (typeof john[i] !== 'string') continue;    // stric different operator
     console.log(john[i]);
 }
 
